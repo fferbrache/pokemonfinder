@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import CardContainer from './components/CardContainer.jsx';
+import { data } from './data/data';
+import pokemonLogo from './assets/img/pokemonLogo.png';
+import finderLogo from './assets/img/finder.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <img className="pokemon-logo" src={pokemonLogo} alt="Pokemon Logo"/>
+        <img className="pokemon-logo" src={finderLogo} alt="Finder"/>
+      <CardContainer pokemonData={data}/>
     </div>
   );
 }
